@@ -1,0 +1,45 @@
+<div class="todo-list">
+
+  <section class="header">
+    <mat-form-field class="form-filed">
+      <mat-label>Todo</mat-label>
+      <input 
+        matInput 
+        placeholder="Enter your task" 
+        [(ngModel)]="newToDo"
+        (keyup.enter)="addTodoHandler()"
+        class="form-input"
+        autocomplete="off"
+        maxlength="255"
+      />
+    </mat-form-field>
+    <button 
+      mat-raised-button 
+      color="primary"
+      (click)="addTodoHandler()"
+    >
+      Add
+    </button>
+  </section>
+
+  <section class="content">
+    <div class="tasks">
+      <div *ngFor="let todo of todos" class="task">
+        <mat-checkbox 
+          class="todo-checkbox" 
+          color="primary"
+          [(ngModel)]="todo.done"
+          (change)="updateTodoHandler(todo)"
+        >
+          <span 
+            class="todo-text"
+            [class.active]="todo.done"
+          >
+            {{todo.name}}
+          </span>
+        </mat-checkbox>
+      </div>
+    </div>
+  </section>
+  
+</div>

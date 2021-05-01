@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  height: 100vh;
+  padding: 10px;
+  background-color: #cfeaf3;
+}
+
+.todo-list {
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.form-filed {
+  flex: 1 1 0;
+  margin-right: 20px;
+}
+
+.tasks {
+  max-height: 80vh;
+  padding: 10px;
+  overflow: hidden auto;
+}
+
+.task {
+  margin: 10px 0;
+}
+
+.active {
+  text-decoration: line-through;
+  color: #00008b;
+}
+
+.todo-text {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
